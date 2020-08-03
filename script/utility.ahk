@@ -1,4 +1,10 @@
 #Persistent
+;
+;@author u/HyakoV2
+;@author u/Zucca
+;
+;Download Pstools from: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
+;Extract from the archive the files pssuspend.exe and pssuspend64.exe into the C:\Windows\
 
 ;===================VARIABLES=================
 ;====================START====================
@@ -9,7 +15,7 @@ NETWORK_ADAPTER_NAME := "Ethernet"
 
 ;==============SHUTDOWN SECTION===============
 ;====================START====================
-Hotkey, ^f1, Shutdown_Script
+Hotkey, ^!f1, Shutdown_Script
 
 
 ;TODO Network Disable and Enable, Thanks: u/CRlME and u/Efeler_Gibi
