@@ -1,18 +1,24 @@
-GTA V Utility Script
+# GTAV Utility Script
 
-Commands
+This script was developed to facilitate the daily tasks of GTAV, avoid griefers in deliveries, empty the public session.
 
-CTRL+ALT+F1 - Shutdown
+## COMMANDS
 
-Network
-CTRL+F2 - Disable, wait, Enable
-CTRL+F3 - Disable
-CTRL+F4 - Enable
+- CTRL+ALT+F1 - Shutdown
 
-Suspend
-CTRL+F5 - Disable, wait, Enable
-CTRL+F6 - Disable
-CTRL+F7 - Enable
+- Network
+  - CTRL+F2 - Disable, wait, Enable
+  - CTRL+F3 - Disable
+  - CTRL+F4 - Enable
 
-Donwload PsTools: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
-Extract pssuspend.exe and pssuspend64.exe on C:\Windows
+- Suspend
+  - CTRL+F5 - Disable, wait, Enable
+  - CTRL+F6 - Disable
+  - CTRL+F7 - Enable
+
+## DEPENDENCY
+### MAIN
+- Download AutoHotkey: https://www.autohotkey.com
+  - Install AutoHotkey
+- Donwload PsTools: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
+  - Extract pssuspend.exe and pssuspend64.exe to C:\Windows
