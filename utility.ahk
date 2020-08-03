@@ -5,7 +5,7 @@
 ;
 ;Download Pstools from: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
 ;Extract from the archive the files pssuspend.exe and pssuspend64.exe into the C:\Windows\
-
+;
 ;===================VARIABLES=================
 ;====================START====================
 DELAY_SUSPEND = 10000
