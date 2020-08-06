@@ -66,10 +66,11 @@ return
 ;TODO Supend and Resume Process, Thanks: u/HyakoV2
 ;===============MODULE SECTION================
 ;====================START====================
-
-f10::
-RunWait, module\v3\ahk_farm.ahk
-
+;
+;EXEMPLE HOW TO CALL ANOTHER SCRIPT
+;f10::
+;RunWait, module\v3\ahk_farm.ahk 
+;
 ;=====================END=====================
 
 
