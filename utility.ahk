@@ -1,9 +1,9 @@
-#Persistent
+#SingleInstance
 ;
 ;@author u/HyakoV2
 ;
-;Download Pstools from: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
-;Extract from the archive the files pssuspend.exe and pssuspend64.exe into the C:\Windows
+;For run: https://github.com/HyakoV3/GTAV-Utility-Script#dependency
+;For use: https://github.com/HyakoV3/GTAV-Utility-Script#commands
 ;
 ;===================VARIABLES=================
 ;====================START====================
@@ -39,6 +39,7 @@ run, *runas %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NA
 return
 ;=====================END=====================
 
+
 ;TODO Supend and Resume Process, Thanks: u/HyakoV2
 ;===============SUSPEND SECTION===============
 ;====================START====================
@@ -59,6 +60,16 @@ return
 ^f7::
 run, pssuspend -r gta5,,hide
 return
+;=====================END=====================
+
+
+;TODO Supend and Resume Process, Thanks: u/HyakoV2
+;===============MODULE SECTION================
+;====================START====================
+
+f10::
+RunWait, module\v3\ahk_farm.ahk
+
 ;=====================END=====================
 
 
