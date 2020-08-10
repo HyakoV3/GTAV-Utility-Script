@@ -2,7 +2,7 @@
 ;
 ;@author u/HyakoV2
 ;
-;For Run: https://github.com/HyakoV3/GTAV-Utility-Script#dependency
+;For run: https://github.com/HyakoV3/GTAV-Utility-Script#dependency
 ;For use: https://github.com/HyakoV3/GTAV-Utility-Script#commands
 ;
 ;-------------------VARIABLES-----------------
@@ -13,9 +13,18 @@ DELAY_NETWORK = 16 ;In Seconds, to calculate the delay of network
 NETWORK_ADAPTER_NAME := "Ethernet"
 ;---------------------END---------------------
 
-;--------------SHUTDOWN SECTION---------------
+;-----------------MENU SECTION----------------
 ;--------------------START--------------------
-Hotkey, ^!f1, Shutdown_Script
+Hotkey, ^!F1, shutdownScript
+Hotkey, ^F1, networkDisableWaitEnable
+Hotkey, ^F2, networkDisable
+Hotkey, ^F3, networkEnable
+Hotkey, ^F5, suspendProcessWaitResume
+Hotkey, ^F6, suspendProcess
+Hotkey, ^F7, resumeProcess
+;Hotkey, F9, startModeule01
+;Hotkey, F10, startModeule02
+;Hotkey, F11, startModeule03
 ;---------------------END---------------------
 
 
@@ -23,6 +32,7 @@ Hotkey, ^!f1, Shutdown_Script
 ;--------------------START--------------------
 if not A_IsAdmin
   Run *RunAs utility.ahk
+  Return
 ;---------------------END---------------------
 
 
@@ -31,21 +41,21 @@ if not A_IsAdmin
 ;--------------------START--------------------
 
 ;Disable, wait 15 seconds, Enable
-^f1::
+networkDisableWaitEnable:
 Run, *RunAs %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NAME%" admin=disabled,,hide
-sleep, ONE_SECOND * DELAY_NETWORK
+Sleep, ONE_SECOND * DELAY_NETWORK
 Run, *RunAs %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NAME%" admin=enabled,,hide
-return
+Return
 
 ;Disable network
-^f2::
+networkDisable:
 Run, *RunAs %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NAME%" admin=disabled,,hide
-return	
+Return	
 
 ;Enable network
-^f3::
+networkEnable:
 Run, *RunAs %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NAME%" admin=enabled,,hide
-return
+Return
 ;---------------------END---------------------
 
 
@@ -54,21 +64,21 @@ return
 ;--------------------START--------------------
 
 ;Suspend Process, wait 12 secondes, Resume Process
-^f5::
+suspendProcessWaitResume:
 Run, pssuspend gta5,,hide
-sleep, ONE_SECOND * DELAY_SUSPEND
+Sleep, ONE_SECOND * DELAY_SUSPEND
 Run, pssuspend -r gta5,,hide
-return
+Return
 
 ;Suspend Process
-^f6::
+suspendProcess:
 Run, pssuspend gta5,,hide
-return
+Return
 
 ;Resume Process
-^f7::
+resumeProcess:
 Run, pssuspend -r gta5,,hide
-return
+Return
 ;---------------------END---------------------
 
 
@@ -77,7 +87,7 @@ return
 ;--------------------START--------------------
 ;
 ;EXEMPLE HOW TO CALL ANOTHER SCRIPT
-;f10::
+;f9::
 ;RunWait, module\v3\ahk_farm.ahk 
 ;
 ;---------------------END---------------------
@@ -85,7 +95,7 @@ return
 
 ;--------------SHUTDOWN SECTION---------------
 ;--------------------START--------------------
-Shutdown_Script:
+shutdownScript:
 ExitApp
 Return
 ;---------------------END---------------------
