@@ -85,8 +85,8 @@ Return
 ;--------------------START--------------------
 ;
 ;EXEMPLE HOW TO CALL ANOTHER SCRIPT
-startModeule01:
-RunWait, module\v3\ahk_farm.ahk
+;startModeule01:
+;RunWait, module\v3\ahk_farm.ahk
 ;
 ;---------------------END---------------------
 
