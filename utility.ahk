@@ -16,17 +16,17 @@ NETWORK_ADAPTER_NAME := "Ethernet"
 ;-----------------MENU SECTION----------------
 ;--------------------START--------------------
 Hotkey, ^!F1, shutdownScript
+;-----------------------
 Hotkey, ^F1, networkDisableWaitEnable
 Hotkey, ^F2, networkDisable
 Hotkey, ^F3, networkEnable
 Hotkey, ^F5, suspendProcessWaitResume
 Hotkey, ^F6, suspendProcess
 Hotkey, ^F7, resumeProcess
-;Hotkey, F9, startModeule01
+Hotkey, F9, startModeule01
 ;Hotkey, F10, startModeule02
 ;Hotkey, F11, startModeule03
 ;---------------------END---------------------
-
 
 ;--------VERIFY ADMIN RUNNING SECTION---------
 ;--------------------START--------------------
@@ -58,7 +58,6 @@ Run, *RunAs %comspec% /c netsh interface set interface name="%NETWORK_ADAPTER_NA
 Return
 ;---------------------END---------------------
 
-
 ;TODO Supend and Resume Process, Thanks: u/HyakoV2
 ;---------------SUSPEND SECTION---------------
 ;--------------------START--------------------
@@ -81,17 +80,15 @@ Run, pssuspend -r gta5,,hide
 Return
 ;---------------------END---------------------
 
-
 ;TODO Supend and Resume Process, Thanks: u/HyakoV2
 ;---------------MODULE SECTION----------------
 ;--------------------START--------------------
 ;
 ;EXEMPLE HOW TO CALL ANOTHER SCRIPT
-;f9::
-;RunWait, module\v3\ahk_farm.ahk 
+startModeule01:
+RunWait, module\v3\ahk_farm.ahk
 ;
 ;---------------------END---------------------
-
 
 ;--------------SHUTDOWN SECTION---------------
 ;--------------------START--------------------

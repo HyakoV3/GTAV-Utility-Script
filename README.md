@@ -4,12 +4,13 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
 
 ## COMMANDS
 
-- CTRL+ALT+F1 - Shutdown
+- Shutdown 
+  - CTRL+ALT+F1 - Shutdown App
 
 - Network
-  - CTRL+F2 - Disable, wait, Enable
-  - CTRL+F3 - Disable
-  - CTRL+F4 - Enable
+  - CTRL+F1 - Disable, wait, Enable
+  - CTRL+F2 - Disable
+  - CTRL+F3 - Enable
 
 - Suspend
   - CTRL+F5 - Disable, wait, Enable
@@ -22,7 +23,8 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
   - Install AutoHotkey
 - Donwload PsTools: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
   - Extract pssuspend.exe and pssuspend64.exe to C:\Windows
-  - First time runing? RUN(WIN+R)
+  - First time runing? 
+    - RUN(WIN+R)
     - Type: pssuspend -r gta5
     - Accept the license
     - Now you are ready to execute on utility script
