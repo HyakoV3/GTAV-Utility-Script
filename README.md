@@ -17,6 +17,10 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
   - CTRL+F6 - Disable
   - CTRL+F7 - Enable
 
+- AFK Prevent
+  - CTRL+F9 - Enable
+  - CTRL+F10 - Disable
+
 ## DEPENDENCY
 ### MAIN
 - Download AutoHotkey: https://www.autohotkey.com

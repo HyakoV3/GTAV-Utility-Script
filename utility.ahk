@@ -14,7 +14,14 @@ if not A_IsAdmin
 ONE_SECOND = 1000 ;In Milliseconds, this is the equivalent of a second 
 DELAY_SUSPEND = 10 ;In Seconds, to calculate the delay of suspend 
 DELAY_NETWORK = 16 ;In Seconds, to calculate the delay of network 
+DELAY_AFK = 5 ;In Seconds, to calculate the delay of network
+KEY_PRESS = 100 ;TODO Delay between the presses on keys
+KEY_SEND = 180 ;TODO Time for each pressed key
 NETWORK_ADAPTER_NAME := "Ethernet" 
+;---------------------END--------------------- 
+
+;---------------CONFIGS - START--------------- 
+SetKeyDelay, KEY_SEND, KEY_PRESS
 ;---------------------END--------------------- 
 
 ;------------MENU SECTION - START------------- 
@@ -26,6 +33,8 @@ Hotkey, ^F3, N_E
 Hotkey, ^F5, P_S_W_R 
 Hotkey, ^F6, P_S 
 Hotkey, ^F7, P_R 
+Hotkey, ^F9, A_F_K
+Hotkey, ^F10, A_F_K_S
 ;----------------------- 
 ;Hotkey, F9, startModeule01 
 ;Hotkey, F10, startModeule02 
@@ -73,6 +82,24 @@ P_S:
 ;Resume Process
 P_R:
   Run, pssuspend -r gta5,,hide
+  Return
+;---------------------END---------------------
+
+;TODO Prevent AFK, Thanks: u/HyakoV2, Feature: u/VZucca
+;------------SUSPEND SECTION - START----------
+
+;Start AFK prevent
+A_F_K:
+  AFK_VER := True
+  While (AFK_VER){
+    Send {z 3}
+		Sleep, ONE_SECOND * DELAY_AFK
+  }
+  Return
+
+;Stop AFK prevent
+A_F_K_S:
+  AFK_VER := False
   Return
 ;---------------------END---------------------
 
