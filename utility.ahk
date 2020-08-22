@@ -106,7 +106,7 @@ A_F_K_S:
   Return
 ;---------------------END---------------------
 
-;TODO Macros
+;TODO Macros, Thanks u/HyakoV2
 ;------------MACRO SECTION - START----------
 
 ;Faster Lester
@@ -117,21 +117,7 @@ F_L:
   Send {Up}
   Send {Right}
   Send {Enter}
-  Send {Up 15} ;First player in the list
-;  Send {Up} ;Wendy
-;  Send {Up} ;Tom Connors
-;  Send {Up} ;Tony
-;  Send {Up} ;Simeon
-;  Send {Up} ;Ron
-;  Send {Up} ;Pegasus
-;  Send {Up} ;Paige
-;  Send {Up} ;Srta. Baker
-;  Send {Up} ;Mors Mutual Seguros
-;  Send {Up} ;Merryweather
-;  Send {Up} ;Mechanic
-;  Send {Up} ;Martin
-;  Send {Up} ;Malc
-;  Send {Up} ;LJT
+  Send {Up 15} 
   Send {Enter}
   Return
 
@@ -143,19 +129,10 @@ F_M:
   Send {Up}
   Send {Right}
   Send {Enter}
-  Send {Up 9} ;First player in the list
-;  Send {Up} ;Wendy
-;  Send {Up} ;Tom Connors
-;  Send {Up} ;Tony
-;  Send {Up} ;Simeon
-;  Send {Up} ;Ron
-;  Send {Up} ;Pegasus
-;  Send {Up} ;Paige
-;  Send {Up} ;Srta. Baker
+  Send {Up 9} 
   Send {Enter}
   Sleep, ONE_SECOND * 5
   Send {Enter 2}
-;  Send {Enter}
   Return
 ;---------------------END---------------------
 
