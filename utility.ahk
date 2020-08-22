@@ -12,11 +12,12 @@ if not A_IsAdmin
 
 ;--------------VARIABLES - START-------------- 
 ONE_SECOND = 1000 ;In Milliseconds, this is the equivalent of a second 
+HALF_SECOND = 500 ;In Milliseconds, this is the equivalent of a half second 
 DELAY_SUSPEND = 10 ;In Seconds, to calculate the delay of suspend 
 DELAY_NETWORK = 16 ;In Seconds, to calculate the delay of network 
 DELAY_AFK = 5 ;In Seconds, to calculate the delay of network
 KEY_PRESS = 100 ;TODO Delay between the presses on keys
-KEY_SEND = 180 ;TODO Time for each pressed key
+KEY_SEND = 140 ;TODO Time for each pressed key
 NETWORK_ADAPTER_NAME := "Ethernet" 
 ;---------------------END--------------------- 
 
@@ -35,6 +36,8 @@ Hotkey, ^F6, P_S
 Hotkey, ^F7, P_R 
 Hotkey, ^F9, A_F_K
 Hotkey, ^F10, A_F_K_S
+Hotkey, F3, F_L
+Hotkey, F4, F_M
 ;----------------------- 
 ;Hotkey, F9, startModeule01 
 ;Hotkey, F10, startModeule02 
@@ -64,7 +67,7 @@ N_E:
   Return
 ;---------------------END---------------------
 
-;TODO Supend and Resume Process, Thanks: u/HyakoV2
+;TODO SUpend and Resume Process, Thanks: u/HyakoV2
 ;------------SUSPEND SECTION - START----------
 
 ;Suspend Process, wait 10 secondes, Resume Process
@@ -103,7 +106,60 @@ A_F_K_S:
   Return
 ;---------------------END---------------------
 
-;TODO Supend and Resume Process, Thanks: u/HyakoV2
+;TODO Macros
+;------------MACRO SECTION - START----------
+
+;Faster Lester
+F_L:
+  WinActivate, ahk_exe GTA5.exe
+  Send {Up}
+  Sleep, HALF_SECOND
+  Send {Up}
+  Send {Right}
+  Send {Enter}
+  Send {Up 15} ;First player in the list
+;  Send {Up} ;Wendy
+;  Send {Up} ;Tom Connors
+;  Send {Up} ;Tony
+;  Send {Up} ;Simeon
+;  Send {Up} ;Ron
+;  Send {Up} ;Pegasus
+;  Send {Up} ;Paige
+;  Send {Up} ;Srta. Baker
+;  Send {Up} ;Mors Mutual Seguros
+;  Send {Up} ;Merryweather
+;  Send {Up} ;Mechanic
+;  Send {Up} ;Martin
+;  Send {Up} ;Malc
+;  Send {Up} ;LJT
+  Send {Enter}
+  Return
+
+;Faster Mors
+F_M:
+  WinActivate, ahk_exe GTA5.exe
+  Send {Up}
+  Sleep, HALF_SECOND
+  Send {Up}
+  Send {Right}
+  Send {Enter}
+  Send {Up 9} ;First player in the list
+;  Send {Up} ;Wendy
+;  Send {Up} ;Tom Connors
+;  Send {Up} ;Tony
+;  Send {Up} ;Simeon
+;  Send {Up} ;Ron
+;  Send {Up} ;Pegasus
+;  Send {Up} ;Paige
+;  Send {Up} ;Srta. Baker
+  Send {Enter}
+  Sleep, ONE_SECOND * 5
+  Send {Enter 2}
+;  Send {Enter}
+  Return
+;---------------------END---------------------
+
+;TODO SUpend and Resume Process, Thanks: u/HyakoV2
 ;----------MODULE SECTION - START-------------
 ;
 ;EXEMPLE HOW TO CALL ANOTHER SCRIPT
