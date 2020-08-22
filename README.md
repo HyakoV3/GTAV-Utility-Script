@@ -21,6 +21,10 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
   - CTRL+F9 - Enable
   - CTRL+F10 - Disable
 
+- Macros
+  - F3 - Faster Leste
+  - F4 - Faster Mors
+
 ## DEPENDENCY
 ### MAIN
 - Download AutoHotkey: https://www.autohotkey.com
