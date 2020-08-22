@@ -22,8 +22,8 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
   - CTRL+F10 - Disable
 
 - Macros
-  - F3 - Faster Leste
-  - F4 - Faster Mors
+  - F3 - Faster Lester
+  - F4 - Faster Mors Mutual
 
 ## DEPENDENCY
 ### MAIN
