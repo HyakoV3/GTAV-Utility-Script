@@ -37,7 +37,8 @@ Hotkey, ^F7, P_R
 Hotkey, ^F9, A_F_K
 Hotkey, ^F10, A_F_K_S
 Hotkey, F3, F_L
-Hotkey, F4, F_M
+Hotkey, F4, F_MM
+Hotkey, F5, F_MEC
 ;----------------------- 
 ;Hotkey, F9, startModeule01 
 ;Hotkey, F10, startModeule02 
@@ -117,19 +118,35 @@ F_L:
   Send {Up}
   Send {Right}
   Send {Enter}
-  Send {Up 15} 
+  Send {Left 3} 
   Send {Enter}
   Return
 
 ;Faster Mors
-F_M:
+F_MM:
   WinActivate, ahk_exe GTA5.exe
   Send {Up}
   Sleep, HALF_SECOND
   Send {Up}
   Send {Right}
   Send {Enter}
-  Send {Up 9} 
+  Send {Left 2}
+  Send {Down}
+  Send {Enter}
+  Sleep, ONE_SECOND * 5
+  Send {Enter 2}
+  Return
+
+;Faster Mechanic
+F_MEC:
+  WinActivate, ahk_exe GTA5.exe
+  Send {Up}
+  Sleep, HALF_SECOND
+  Send {Up}
+  Send {Right}
+  Send {Enter}
+  Send {Left 2}
+  Send {UP}
   Send {Enter}
   Sleep, ONE_SECOND * 5
   Send {Enter 2}
