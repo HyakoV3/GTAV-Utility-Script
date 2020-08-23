@@ -24,6 +24,8 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
 - Macros
   - F3 - Faster Lester
   - F4 - Faster Mors Mutual
+  - F5 - Faster Mechanic
+  - F6 - Cancel animation (credit: https://www.youtube.com/watch?v=fsNpOC3cQQM)
 
 ## DEPENDENCY
 ### MAIN
