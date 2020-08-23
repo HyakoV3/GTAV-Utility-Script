@@ -37,8 +37,10 @@ Hotkey, ^F7, P_R
 Hotkey, ^F9, A_F_K
 Hotkey, ^F10, A_F_K_S
 Hotkey, F3, F_L
-Hotkey, F4, F_MM
+Hotkey, F4, F_MMI
 Hotkey, F5, F_MEC
+Hotkey, F6, CANCEL_ANI
+
 ;----------------------- 
 ;Hotkey, F9, startModeule01 
 ;Hotkey, F10, startModeule02 
@@ -114,7 +116,7 @@ A_F_K_S:
 F_L:
   WinActivate, ahk_exe GTA5.exe
   Send {Up}
-  Sleep, HALF_SECOND
+  Sleep, HALF_SECOND  
   Send {Up}
   Send {Right}
   Send {Enter}
@@ -123,7 +125,7 @@ F_L:
   Return
 
 ;Faster Mors
-F_MM:
+F_MMI:
   WinActivate, ahk_exe GTA5.exe
   Send {Up}
   Sleep, HALF_SECOND
@@ -133,8 +135,6 @@ F_MM:
   Send {Left 2}
   Send {Down}
   Send {Enter}
-  Sleep, ONE_SECOND * 5
-  Send {Enter 2}
   Return
 
 ;Faster Mechanic
@@ -148,8 +148,14 @@ F_MEC:
   Send {Left 2}
   Send {UP}
   Send {Enter}
-  Sleep, ONE_SECOND * 5
-  Send {Enter 2}
+  Return
+  
+;Cancel animation
+CANCEL_ANI:
+  WinActivate, ahk_exe GTA5.exe
+  Send {Esc}
+  Send {E}
+  Send {Esc}
   Return
 ;---------------------END---------------------
 
