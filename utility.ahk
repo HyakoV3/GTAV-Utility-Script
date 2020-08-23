@@ -36,10 +36,10 @@ Hotkey, ^F6, P_S
 Hotkey, ^F7, P_R 
 Hotkey, ^F9, A_F_K
 Hotkey, ^F10, A_F_K_S
-Hotkey, F1, F_L
-Hotkey, F2, F_MMI
-Hotkey, F3, F_MEC
-Hotkey, F4, CANCEL_ANI
+Hotkey, F3, F_L
+Hotkey, F4, F_MMI
+Hotkey, F5, F_MEC
+Hotkey, F6, CANCEL_ANI
 
 ;----------------------- 
 ;Hotkey, F9, startModeule01 
