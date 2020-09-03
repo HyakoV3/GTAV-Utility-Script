@@ -154,7 +154,9 @@ F_MEC:
 CANCEL_ANI:
   WinActivate, ahk_exe GTA5.exe
   Send {Esc}
+  Sleep, 100
   Send {E}
+  Sleep, 300
   Send {Esc}
   Return
 ;---------------------END---------------------

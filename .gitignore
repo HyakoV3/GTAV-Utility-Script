@@ -1,3 +1,4 @@
 # exclude everything except module/.gikeep
 module/*
 !module/.gitkeep
+utility.exe
