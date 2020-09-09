@@ -31,12 +31,3 @@ This script was developed to facilitate the daily tasks of GTAV, avoid griefers 
 ### MAIN
 - Download AutoHotkey: https://www.autohotkey.com
   - Install AutoHotkey
-
-- Donwload PsTools: https://docs.microsoft.com/en-us/sysinternals/downloads/pstools
-  - Extract pssuspend.exe and pssuspend64.exe to C:\Windows
-  
-  - First time runing?? 
-    - RUN
-    - Type: pssuspend -r gta5
-    - Accept the license
-    - Now you are ready to execute on utility script
