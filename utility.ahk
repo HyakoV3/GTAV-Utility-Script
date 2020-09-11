@@ -70,24 +70,69 @@ N_E:
   Return
 ;---------------------END---------------------
 
-;TODO SUpend and Resume Process, Thanks: u/HyakoV2
+;TODO SUpend and Resume Process, Thanks: u/HyakoV2 & u/TDarkShadow
 ;------------SUSPEND SECTION - START----------
+
+; Suspends a process which has the given pid value.
+SuspendProcess(pid) {
+     hProcess := DllCall("OpenProcess", "UInt", 0x1F0FFF, "Int", 0, "Int", pid)
+     If (hProcess) {
+          DllCall("ntdll.dll\NtSuspendProcess", "Int", hProcess)
+          DllCall("CloseHandle", "Int", hProcess)
+     }
+  }
+  Return
+
+; Resumes a process which has the given pid value.
+ResumeProcess(pid) {
+     hProcess := DllCall("OpenProcess", "UInt", 0x1F0FFF, "Int", 0, "Int", pid)
+     If (hProcess) {
+          DllCall("ntdll.dll\NtResumeProcess", "Int", hProcess)
+          DllCall("CloseHandle", "Int", hProcess)
+     }
+  }
+  Return
+
+; Checks wether a process which has the given pid value is suspended (true) or not (false).
+IsProcessSuspended(pid) {
+     For thread in ComObjGet("winmgmts:").ExecQuery("Select * from Win32_Thread WHERE ProcessHandle = " pid)
+     If (thread.ThreadWaitReason != 5)
+     Return False
+     Return True
+  }
+  Return
 
 ;Suspend Process, wait 10 secondes, Resume Process
 P_S_W_R:
-  Run, pssuspend gta5,,hide
+  Process, Exist, GTA5.exe
+  pid := ErrorLevel
+  If (!IsProcessSuspended(pid)) {
+      SuspendProcess(pid)
+  }
   Sleep, ONE_SECOND * DELAY_SUSPEND
-  Run, pssuspend -r gta5,,hide
+  Process, Exist, GTA5.exe
+  pid := ErrorLevel
+  If (IsProcessSuspended(pid)) {
+      ResumeProcess(pid)
+  }
   Return
 
 ;Suspend Process
 P_S:
-  Run, pssuspend gta5,,hide
+  Process, Exist, GTA5.exe
+  pid := ErrorLevel
+  If (!IsProcessSuspended(pid)) {
+      SuspendProcess(pid)
+  }
   Return
 
 ;Resume Process
 P_R:
-  Run, pssuspend -r gta5,,hide
+  Process, Exist, GTA5.exe
+  pid := ErrorLevel
+  If (IsProcessSuspended(pid)) {
+      ResumeProcess(pid)
+  }
   Return
 ;---------------------END---------------------
 
