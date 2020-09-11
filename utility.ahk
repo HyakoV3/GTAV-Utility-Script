@@ -115,6 +115,7 @@ P_S_W_R:
   If (IsProcessSuspended(pid)) {
       ResumeProcess(pid)
   }
+  Return
 
 ;Suspend Process
 P_S:
